@@ -2,3 +2,4 @@
 %project=hobbies
 
 00-init 2024-10-14T13:59:39Z SowKaneda <sowkaneda@sowkaneda-ThinkPad-T470-W10DG> # create tables
+01-CRUDFunctions 2024-10-29T16:36:21Z SowKaneda <sowkaneda@sowkaneda-ThinkPad-T470-W10DG> # Add CRUD functions for each tables

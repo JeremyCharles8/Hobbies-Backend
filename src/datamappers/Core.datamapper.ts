@@ -8,17 +8,18 @@ export default class CoreDatamapper {
     this.client = client;
   }
 
-  async create (input, id: number | void) {
-    if(this.constructor.tableName === 'user') {
+  async create (input: object, id: number | void) {
+    const className = this.constructor as typeof CoreDatamapper;
+    if(className.tableName === 'user') {
       await this.client.query(
         'SELECT insert_user($1::json);',
         [input],
       );
     } else {
       await this.client.query(
-        `SELECT insert_${this.constructor.tableName}($1::int, $2::json);`,
+        `SELECT insert_${className.tableName}($1::int, $2::json);`,
         [id, input],
       );
     }
   }
-}
+};

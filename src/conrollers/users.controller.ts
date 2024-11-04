@@ -2,24 +2,25 @@ import { Request, Response, NextFunction } from 'express';
 import * as argon from 'argon2';
 
 import { userDatamapper } from '../datamappers/index.datamapper';
+import ApiError from '../errors/Api.error';
 
 import { CreateUser } from '../types/createUser.type';
 
 export default {
   async store(req: Request<{}, {}, CreateUser>, res: Response, next: NextFunction): Promise<void> {
     if(!req.body) {
-      return next(new ApiError('Missing request body', { status: 400 }));
+      return next(new ApiError('Missing request body', 400));
     }
     const { nickname, email, password } = req.body;
-    //type for alreadyExists variables
+    //TODO type for alreadyExists variables
     const emailAlreadyExists = await userDatamapper.findOne('email', email);
     if(emailAlreadyExists) {
-      return next(new ApiError('Email already exists', { status: 409 }));
+      return next(new ApiError('Email already exists', 409));
     }
 
     const nicknameAlreadyExists = await userDatamapper.findOne('nickname', nickname);
     if(nicknameAlreadyExists) {
-      return next(new ApiError('Nickname already exists', { status: 409 }));
+      return next(new ApiError('Nickname already exists', 409));
     }
 
     //

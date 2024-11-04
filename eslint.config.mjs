@@ -6,6 +6,9 @@ import tseslint from "typescript-eslint";
 export default [
   {files: ["**/*.{js,mjs,cjs,ts}"]},
   {
+    pluging: {
+      '@typescript-eslint': tseslint,
+    },
     rules: {
       indent: ["error", 2],
       "comma-dangle": ["error", "always-multiline"],
@@ -13,6 +16,7 @@ export default [
       semi: ["error", "always"],
       "semi-style": ["error", "last"],
       "no-trailing-spaces": "error",
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
     languageOptions: {
       globals: {
