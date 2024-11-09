@@ -11,6 +11,7 @@ CREATE TABLE "user" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   "nickname" text NOT NULL UNIQUE,
   "email" email NOT NULL UNIQUE,
+  "role" text NOT NULL DEFAULT 'user',
   "password" text NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "updated_at" timestamptz
@@ -38,7 +39,7 @@ CREATE TABLE "book" (
 
 CREATE TABLE "board_game" (
   "id" int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-  "title" text NOT NULL,
+  "title" text NOT NULL UNIQUE,
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "updated_at" timestamptz
 );

@@ -1,14 +1,22 @@
 import CoreDatamapper from './Core.datamapper';
 
-export default class UserDatamapper extends CoreDatamapper {
+import { CreateUser, IUser, LoginUser } from '../types/user.type';
+import { QueryResult } from 'pg';
+
+export default class UserDatamapper extends CoreDatamapper<IUser, CreateUser> {
   static tableName: string = 'user';
 
-  async findOne(column: string, input: string) {
-    //TODO Check for data type and format
-    const data = await this.client.query(`
-      SELECT select_user_by_${column}($1::text);`,
+  async findOne(column: string, input: string): Promise<LoginUser | boolean | null> {
+    // Request to database
+    const results: QueryResult<{result: LoginUser | boolean}> = await this.client.query(`
+      SELECT select_user_by_${column}($1::text) as result;`,
     [input],
     );
-    return data;
+
+    if(results.rows.length === 0){
+      return null;
+    }
+    // Return data
+    return results.rows[0].result;
   }
 };
