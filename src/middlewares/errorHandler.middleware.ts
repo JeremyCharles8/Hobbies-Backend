@@ -1,10 +1,9 @@
 import { Request, Response, NextFunction } from "express";
-
 import ApiError from '../errors/Api.error';
 
 import { JoiErr } from "../types/joiError.type";
-
-export default (err: ApiError, req: Request, res: Response, _next: NextFunction) => {
+//TODO Type for Promise
+export default (err: ApiError, _req: Request, res: Response, _next: NextFunction) => {
   let { status, message } = err;
 
   if(err.name === 'ValidationError'){

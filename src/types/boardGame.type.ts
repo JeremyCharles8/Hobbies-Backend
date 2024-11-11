@@ -5,4 +5,4 @@ export interface IBoardGame {
   updated_at: Date;
 };
 
-export type createBoardGame = Pick<IBoardGame, 'title'>;
+export type CreateBoardGame = Pick<IBoardGame, 'title'>;

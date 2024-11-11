@@ -8,4 +8,4 @@ export interface IBook {
   updated_at: Date;
 };
 
-export type createBook = Omit<IBook, 'id' | 'created_at' | 'updated_at'>;
+export type CreateBook = Omit<IBook, 'id' | 'created_at' | 'updated_at'>;

@@ -4,21 +4,18 @@ import * as argon from 'argon2';
 import { userDatamapper } from '../datamappers/index.datamapper';
 import ApiError from '../errors/Api.error';
 
-import { CreateUser } from '../types/createUser.type';
+import { LoginUser, CreateUser } from "../types/user.type";
 
 export default {
   async store(req: Request<{}, {}, CreateUser>, res: Response, next: NextFunction): Promise<void> {
-    if(!req.body) {
-      return next(new ApiError('Missing request body', 400));
-    }
     const { nickname, email, password } = req.body;
-    //TODO type for alreadyExists variables
-    const emailAlreadyExists = await userDatamapper.findOne('email', email);
+    
+    const emailAlreadyExists: LoginUser | null = await userDatamapper.findOne('email', email);
     if(emailAlreadyExists) {
       return next(new ApiError('Email already exists', 409));
     }
 
-    const nicknameAlreadyExists = await userDatamapper.findOne('nickname', nickname);
+    const nicknameAlreadyExists: boolean = await userDatamapper.findOne('nickname', nickname);
     if(nicknameAlreadyExists) {
       return next(new ApiError('Nickname already exists', 409));
     }
@@ -33,5 +30,4 @@ export default {
 
     res.status(201).json({ message: 'User created successfully'});
   },
-
-};
+}

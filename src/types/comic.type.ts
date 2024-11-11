@@ -8,4 +8,4 @@ export interface IComic {
   updated_at?: Date;
 };
 
-export type createComic = Omit<IComic, 'id' | 'created_at' | 'updated_at'>;
+export type CreateComic = Omit<IComic, 'id' | 'created_at' | 'updated_at'>;
