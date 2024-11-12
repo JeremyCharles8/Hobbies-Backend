@@ -24,7 +24,7 @@ export default class CoreDatamapper<R extends QueryResultRow, I> {
     const results: QueryResult<{result: R}> = await this.client.query(
       `SELECT select_${className.tableName}_by_pk($1::int) as result;`,
       [id]
-    )
+    );
     if(results.rows.length === 0){
       return null;
     }
@@ -59,12 +59,14 @@ export default class CoreDatamapper<R extends QueryResultRow, I> {
     return results.rows[0].result;
   }
 
-  async delete(id: number): Promise<void> {
+  async delete(id: number): Promise<boolean> {
     const className = this.constructor as typeof CoreDatamapper;
     // Request to database
-    await this.client.query(
-      `SELECT delete_${className.tableName}($1::int);`,
+    const result = await this.client.query(
+      `DELETE FROM "${className.tableName}" WHERE "id" = $1::int;`,
     [id]
     );
+    // Return data
+    return !!result.rowCount;
   }
 };

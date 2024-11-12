@@ -1,43 +1,61 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 
-export default class CoreController<I, J, R > {
-  //TODO service interface
-  static service = null;
+import { IService } from '../types/service.type';
+//? Error here or in services?
+// import ApiError from '../errors/Api.error';
+
+export default class CoreController<R, I, J> {
+  //TODO Manage any types on IService
+  static service: IService<any, any, any, any>;
   static entityName: string | null = null;
 
-  static async getAll(_: Request, res: Response): Promise<Response<R[]>> {
-    const data = await this.service.findAll();
+  constructeur() {};
+
+  async getAll(_: Request, res: Response): Promise<Response<R[]>> {
+    const className = this.constructor as typeof CoreController;
+    const data: R[] = await className.service.findAll();
 
     return res.status(200).json(data);
   }
 
-  static async getOne(req: Request, res: Response): Promise<Response<R>> {
-    //TODO id and req.params type
-    const id = req.params.id;
-    const data = await this.service.findByPk(id);
+  async getOne<R>(req: Request, res: Response, next: NextFunction): Promise<Response<R>> {
+    const className = this.constructor as typeof CoreController;
+    const id = parseInt(req.params.id, 10);
+    const data: R = await className.service.findByPk(id);
+    //? Manage error here or in services ?
+    // if(!data){
+    //   return next(new ApiError(`${className.entityName} not found`, 404));
+    // }
 
     return res.status(200).json(data);
   }
-  //TODO Promise type
-  static async create(req: Request, res: Response): Promise<void> {
-    const input: I = req.body;
-    await this.service.create(input);
+  
+  async create(req: Request<{}, {}, I>, res: Response): Promise<Response> {
+    const className = this.constructor as typeof CoreController;
+    const input = req.body;
+    await className.service.create(input);
 
-    return res.status(201).json({ message: `${this.entityName} created successfully` });
+    return res.status(201).json({ message: `${className.entityName} created successfully` });
   }
-  //TODO types
-  static async update(req: Request, res: Response): Promise<R> {
-    const input: J = req.body;
-    const { id } = req.params;
-    const updatedData: R = await this.service.update(id, input);
+  
+  async update(req: Request<{id: string}, {}, J>, res: Response, next: NextFunction): Promise<Response<R>> {
+    const className = this.constructor as typeof CoreController;
+    const id = parseInt(req.params.id, 10);
+    const input = req.body;
+    const updatedData: R = await className.service.update(id, input);
+    //? Manage error here or in services ?
+    // if(!updatedData){
+    //   return next(new ApiError(`${className.entityName} not found`, 404));
+    // }
 
     return res.status(200).json(updatedData);
   }
-  //TODO Promise type
-  static async delete(req: Request, res: Response): Promise<void> {
-    const { id } = req.params;
-    await this.service.delete(id);
+  
+  async delete(req: Request, res: Response): Promise<Response> {
+    const className = this.constructor as typeof CoreController;
+    const id = parseInt(req.params.id, 10);
+    await className.service.delete(id);
 
-    return res.status(200).json({ message: `${this.entityName} deleted successfully`});
+    return res.status(204);
   }
 };
