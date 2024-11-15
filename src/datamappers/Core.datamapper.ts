@@ -1,6 +1,6 @@
 import { Pool, QueryResult, QueryResultRow } from "pg";
 
-export default class CoreDatamapper<R extends QueryResultRow, I> {
+export default class CoreDatamapper<R extends QueryResultRow, I, J> {
   static tableName: string | null = null;
   protected client: Pool;
 
@@ -48,7 +48,7 @@ export default class CoreDatamapper<R extends QueryResultRow, I> {
     }
   }
 
-  async update(id: number, input: I): Promise<R> {
+  async update(id: number, input: J): Promise<R> {
     const className = this.constructor as typeof CoreDatamapper;
     //Request to database
     const results: QueryResult<R> = await this.client.query(

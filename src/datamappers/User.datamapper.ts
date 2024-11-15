@@ -1,9 +1,9 @@
 import CoreDatamapper from './Core.datamapper';
 
-import { CreateUser, FindOneColumn, IUser, LoginUser } from '../types/user.type';
+import { CreateUser, FindOneColumn, User, LoginUser, UpdateUser } from '../types/user.type';
 import { QueryResult } from 'pg';
 
-export default class UserDatamapper extends CoreDatamapper<IUser, CreateUser> {
+export default class UserDatamapper extends CoreDatamapper<User, CreateUser, UpdateUser> {
   static tableName: string = 'user';
 
   async findOne<T extends FindOneColumn>(column: T, input: string): Promise<T extends 'email' ? LoginUser | null : boolean> {

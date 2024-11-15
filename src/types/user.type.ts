@@ -14,10 +14,10 @@ export interface IUser {
   comic: IComic[];
   boardGame: IBoardGame[];
   created_at: Date;
-  updated_at?: Date | null;
+  updated_at?: Date;
 };
 
-export type User = Omit<IUser, 'password'>;
+export type User = Omit<IUser, 'password' | 'repeatPassword'>;
 
 export type CreateUser = Pick<IUser, 'nickname' | 'email' | 'password' | 'repeatPassword'>;
 
