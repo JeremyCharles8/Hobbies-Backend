@@ -32,6 +32,12 @@ export default class CoreDatamapper<R extends QueryResultRow, I, J> {
     return results.rows[0].result;
   }
 
+  /**
+   * Generic method which adds an entity to database
+   * @param {I} input - Object which contains new entity's informations 
+   * @param {number | void} id - User id used if which is add is not an user
+   * @returns {Promise<{void}>}
+   */
   async create(input: I, id: number | void): Promise<void> {
     const className = this.constructor as typeof CoreDatamapper;
     // Request to database

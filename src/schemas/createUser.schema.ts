@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-import { CreateUser } from '../types/user.type';
+import { CreateUser } from '../types/user.type.ts';
 
 export default Joi.object<CreateUser>({
   nickname: Joi.string()
@@ -15,7 +15,7 @@ export default Joi.object<CreateUser>({
   password: Joi.string()
     .min(8)
     .max(64)
-    //TODO pattern regex
+    .pattern(new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$'))
     .required()
     .messages({
       'string.pattern.base': 'Password must contain at least 8 characters including uppercase, lowercase, number and special characters',

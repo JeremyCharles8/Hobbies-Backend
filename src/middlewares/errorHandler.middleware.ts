@@ -1,9 +1,11 @@
-import { Request, Response, NextFunction } from "express";
-import ApiError from '../errors/Api.error';
+import { ErrorRequestHandler } from "express";
+import ApiError from '../errors/Api.error.ts';
+import logger from '../helpers/logger.helper.ts';
 
-import { JoiErr } from "../types/joiError.type";
-//TODO Type for Promise
-export default (err: ApiError, _req: Request, res: Response, _next: NextFunction) => {
+import { JoiErr } from "../types/joiError.type.ts";
+
+const errorHandler: ErrorRequestHandler = (err: ApiError, _req, res, _next): void => {
+  logger.error(err);
   let { status, message } = err;
 
   if(err.name === 'ValidationError'){
@@ -20,5 +22,7 @@ export default (err: ApiError, _req: Request, res: Response, _next: NextFunction
     err.message = 'Internal Server Error';
   }
 
-  return  res.status(status).json({ error: message });
+  res.status(status).json({ error: message });
 };
+
+export default errorHandler;

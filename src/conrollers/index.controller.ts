@@ -1,5 +1,5 @@
-import userService from "../services/user.service";
-import UserController from "./user.controller";
+import userService from "../services/user.service.ts";
+import UserController from "./User.controller.ts";
 
 
 export const userController = new UserController(userService);

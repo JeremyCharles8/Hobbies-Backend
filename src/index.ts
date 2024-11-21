@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { createServer } from 'http';
-import app from './src/index.app';
+import app from './index.app.ts';
 
 dotenv.config();
 

@@ -1,0 +1,12 @@
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'constructor')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'constructor')\n" +
+    '    at create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/conrollers/Core.controller.ts:40:28)\n' +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:6:11)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/validation.middleware.ts:10:5)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-11-21T19:13:40.587Z'
+}

@@ -1,6 +1,6 @@
-import CoreDatamapper from './Core.datamapper';
+import CoreDatamapper from './Core.datamapper.ts';
 
-import { CreateUser, FindOneColumn, User, LoginUser, UpdateUser } from '../types/user.type';
+import { CreateUser, FindOneColumn, User, LoginUser, UpdateUser } from '../types/user.type.ts';
 import { QueryResult } from 'pg';
 
 export default class UserDatamapper extends CoreDatamapper<User, CreateUser, UpdateUser> {

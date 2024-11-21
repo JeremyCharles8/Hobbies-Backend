@@ -1,6 +1,6 @@
-import { IBoardGame } from "./boardGame.type";
-import { IBook } from "./book.type";
-import { IComic } from "./comic.type";
+import { IBoardGame } from "./boardGame.type.ts";
+import { IBook } from "./book.type.ts";
+import { IComic } from "./comic.type.ts";
 
 export interface IUser {
   id: number;

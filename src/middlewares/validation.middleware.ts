@@ -1,5 +1,8 @@
 import { Response, Request, NextFunction } from "express";
-import { Schema, ValidationError } from "joi";
+import joi from "joi";
+import { Schema } from 'joi';
+
+const { ValidationError } = joi;
 
 export default (schema: Schema,reqProperty: keyof Request) => async (req: Request, _res: Response, next: NextFunction): Promise<void> => {
   try {
