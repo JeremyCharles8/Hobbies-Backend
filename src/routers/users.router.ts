@@ -10,7 +10,7 @@ const router = express.Router();
 router.route('/signup')
   .post(
     validator(createUserSchema, 'body'),
-    cw(userController.create)
+    cw(userController.create.bind(userController))
   );
 
 export default router;

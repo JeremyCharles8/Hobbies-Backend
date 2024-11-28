@@ -1,8 +1,6 @@
-import dotenv from 'dotenv';
+import './config/env.ts';
 import { createServer } from 'http';
 import app from './index.app.ts';
-
-dotenv.config();
 
 const httpServer = createServer(app);
 
