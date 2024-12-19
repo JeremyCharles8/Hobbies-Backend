@@ -15,14 +15,17 @@ CREATE FUNCTION "select_user_by_email" (input text) RETURNS JSON AS $$
   WHERE "email" = $1::text;
 $$ LANGUAGE SQL STRICT;
 
--- CREATE FUNCTION "select_user_by_nickname" (input text) RETURNS BOOLEAN AS $$
+CREATE FUNCTION "select_user_by_nickname" (input text) RETURNS JSON AS $$
 
---   SELECT EXISTS (
---     SELECT 1
---     FROM "user"
---     WHERE "nickname" = $1
---   );
--- $$ LANGUAGE SQL STRICT;
+  SELECT
+    json_build_object(
+      'id', "id",
+      'nickname', "nickname",
+      'email', "email"
+    )
+  FROM "user"
+  WHERE "nickname" = $1::text;
+$$ LANGUAGE SQL STRICT;
 
 
 CREATE FUNCTION "insert_user" (input json) RETURNS VOID AS $$

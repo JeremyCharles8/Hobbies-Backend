@@ -1,7 +1,6 @@
-import * as argon from 'argon2';
-
 import { userDatamapper } from '../datamappers/index.datamapper.ts';
 import ApiError from '../errors/Api.error.ts';
+import argon from '../helpers/argon.helper.ts';
 
 import { LoginUser, CreateUser, User, PublicUser, AdminUser, UpdateUser } from "../types/user.type.ts";
 //TODO End delete, login, logout methods and manage errors.
@@ -38,7 +37,7 @@ export default {
       throw(new ApiError('Nickname already exists', 409));
     }
 
-    const hashedPassword: string = await argon.hash(password);
+    const hashedPassword: string = await argon.hashFunc(password);
     await userDatamapper.create({
       nickname,
       email,

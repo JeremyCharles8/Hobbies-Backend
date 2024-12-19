@@ -5,6 +5,6 @@ import { IService } from '../types/service.type.ts';
 import { CreateUser, LoginUser, UpdateUser, User } from '../types/user.type.ts';
 
 export default class UserController extends CoreController<User,CreateUser, UpdateUser> {
-  entityName: string = 'User';
+  static entityName: string = 'User';
   service: IService<User, CreateUser, UpdateUser, LoginUser> = userServices;
 };

@@ -88,3 +88,37 @@
     '    at async <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:6:5)',
   timestamp: '2024-11-28T15:50:12.203Z'
 }
+{
+  status: 409,
+  level: 'error',
+  message: 'Email already exists',
+  stack: 'Error: Email already exists\n' +
+    '    at Object.create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/services/user.service.ts:33:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserController.create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/conrollers/Core.controller.ts:42:5)\n' +
+    '    at async <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:6:5)',
+  timestamp: '2024-12-03T14:36:28.897Z'
+}
+{
+  level: 'error',
+  message: "Cannot access 'className' before initialization",
+  stack: "ReferenceError: Cannot access 'className' before initialization\n" +
+    '    at UserController.create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/conrollers/Core.controller.ts:37:37)\n' +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:6:11)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/validation.middleware.ts:10:5)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  timestamp: '2024-12-03T14:51:35.772Z'
+}
+{
+  status: 409,
+  level: 'error',
+  message: 'Email already exists',
+  stack: 'Error: Email already exists\n' +
+    '    at Object.create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/services/user.service.ts:33:13)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n' +
+    '    at async UserController.create (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/conrollers/Core.controller.ts:40:5)\n' +
+    '    at async <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:6:5)',
+  timestamp: '2024-12-03T14:52:36.605Z'
+}

@@ -1,11 +1,8 @@
 import { Request, Response } from 'express';
 
 import { IService } from '../types/service.type.ts';
-//? Error here or in services?
-// import ApiError from '../errors/Api.error';
 
 export default class CoreController<R, I, J> {
-  //TODO Manage any types on IService
   service: IService<R, I, J, any>;
   static entityName: string | null = null;
 

@@ -6,7 +6,8 @@ SELECT *
 FROM pg_proc
 WHERE proname IN (
   'select_user',
-  'select_user_by_email'
+  'select_user_by_email',
+  'select_user_by_nickname'
 );
 
 ROLLBACK;

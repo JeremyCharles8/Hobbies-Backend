@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP FUNCTION insert_user, select_user_by_email;
+DROP FUNCTION insert_user, select_user_by_nickname, select_user_by_email;
 
 COMMIT;
