@@ -2,6 +2,10 @@
 
 BEGIN;
 
-DROP FUNCTION insert_user, select_user_by_nickname, select_user_by_email;
+DROP FUNCTION IF EXISTS
+  "update_user" (int, json), 
+  "insert_user" (json), 
+  "select_user_by_nickname" (text), 
+  "select_user_by_email" (text);
 
 COMMIT;

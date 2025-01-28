@@ -5,9 +5,6 @@ import { userDatamapper } from '../../datamappers/index.datamapper.ts';
 import argon from '../../helpers/argon.helper.ts';
 
 jest.spyOn(argon, 'hashFunc').mockImplementation(jest.fn());
-// jest.mock('../../helpers/argon.helper.ts', () => ({
-//   hashFunc: jest.fn().mockResolvedValue('hashedPassword'),
-// }));
 jest.spyOn(userDatamapper, 'create').mockImplementation(jest.fn());
 jest.spyOn(userDatamapper, 'findOne').mockImplementation(jest.fn());
 
@@ -23,7 +20,7 @@ describe('create', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-  })
+  });
 
   // Test create() if email already exists
   describe('If email already exists', () => {
@@ -31,14 +28,19 @@ describe('create', () => {
       userDatamapper.findOne.mockResolvedValueOnce(true);
     });
 
-    test('Should call findOne() with correct arguments', async() => {
-      await expect(service.create(mockCreateUser)).rejects.toThrow('Email already exists');
+    test('Should call findOne() with correct arguments', async () => {
+      await expect(service.create(mockCreateUser)).rejects.toThrow(
+        'Email already exists',
+      );
       await service.create(mockCreateUser);
 
-      expect(userDatamapper.findOne).toHaveBeenCalledWith('email', mockCreateUser.email);
+      expect(userDatamapper.findOne).toHaveBeenCalledWith(
+        'email',
+        mockCreateUser.email,
+      );
     });
-  
-    test('Should throw an error object which contains expected properties', async() =>{
+
+    test('Should throw an error object which contains expected properties', async () => {
       await expect(service.create(mockCreateUser)).rejects.toMatchObject({
         message: 'Email already exists',
         status: 409,
@@ -55,11 +57,21 @@ describe('create', () => {
     });
 
     test('Should call findOne with correct arguments', async () => {
-      await expect(service.create(mockCreateUser)).rejects.toThrow('Nickname already exists');
+      await expect(service.create(mockCreateUser)).rejects.toThrow(
+        'Nickname already exists',
+      );
       await service.create(mockCreateUser);
-  
-      expect(userDatamapper.findOne).toHaveBeenNthCalledWith(1, 'email', mockCreateUser.email);
-      expect(userDatamapper.findOne).toHaveBeenNthCalledWith(2, 'nickname', mockCreateUser.nickname);
+
+      expect(userDatamapper.findOne).toHaveBeenNthCalledWith(
+        1,
+        'email',
+        mockCreateUser.email,
+      );
+      expect(userDatamapper.findOne).toHaveBeenNthCalledWith(
+        2,
+        'nickname',
+        mockCreateUser.nickname,
+      );
     });
 
     test('Should throw an error object with correct properties', async () => {

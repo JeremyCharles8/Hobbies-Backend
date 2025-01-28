@@ -13,6 +13,8 @@ CREATE TABLE "user" (
   "email" email NOT NULL UNIQUE,
   "role" text NOT NULL DEFAULT 'user',
   "password" text NOT NULL,
+  "img_url" text,
+  "refresh_token" text,
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "updated_at" timestamptz
 );
@@ -23,6 +25,7 @@ CREATE TABLE "comic" (
   "title" text NOT NULL,
   "volume" int,
   "serie" text NOT NULL,
+  "type" text NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "updated_at" timestamptz
 );
@@ -33,6 +36,7 @@ CREATE TABLE "book" (
   "title" text NOT NULL,
   "volume" int,
   "serie" text NOT NULL,
+  "type" text NOT NULL,
   "created_at" timestamptz NOT NULL DEFAULT now(),
   "updated_at" timestamptz
 );

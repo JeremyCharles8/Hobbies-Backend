@@ -41,4 +41,15 @@ CREATE FUNCTION "insert_user" (input json) RETURNS VOID AS $$
   );
 $$ LANGUAGE SQL STRICT;
 
+CREATE FUNCTION "update_user" (id int, input json) RETURNS VOID AS $$
+
+  UPDATE "user" SET
+    "email" = COALESCE(($2->>'email')::text, "email"),
+    "password" = COALESCE(($2->>'password')::text, "password"),
+    "img_url" = COALESCE(($2->>'imgUrl')::text, "img_url"),
+    "refresh_token" = COALESCE(($2->>'refreshToken')::text, "refresh_token"),
+    "updated_at" = now()
+  WHERE "id" = $1::int;
+$$ LANGUAGE SQL STRICT;
+
 COMMIT;

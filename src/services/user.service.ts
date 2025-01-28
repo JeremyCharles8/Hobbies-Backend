@@ -2,7 +2,14 @@ import { userDatamapper } from '../datamappers/index.datamapper.ts';
 import ApiError from '../errors/Api.error.ts';
 import argon from '../helpers/argon.helper.ts';
 
-import { LoginUser, CreateUser, User, PublicUser, AdminUser, UpdateUser } from "../types/user.type.ts";
+import {
+  LoginUser,
+  CreateUser,
+  User,
+  PublicUser,
+  AdminUser,
+  UpdateUser,
+} from '../types/user.type.ts';
 //TODO End delete, login, logout methods and manage errors.
 export default {
   // async getAll(): Promise<User[]> {
@@ -26,15 +33,21 @@ export default {
    */
   async create(input: CreateUser): Promise<void> {
     const { nickname, email, password } = input;
-    
-    const emailAlreadyExists: LoginUser | null = await userDatamapper.findOne('email', email);
-    if(emailAlreadyExists) {
-      throw(new ApiError('Email already exists', 409));
+
+    const emailAlreadyExists: LoginUser | null = await userDatamapper.findOne(
+      'email',
+      email,
+    );
+    if (emailAlreadyExists) {
+      throw new ApiError('Email already exists', 409);
     }
 
-    const nicknameAlreadyExists: boolean = await userDatamapper.findOne('nickname', nickname);
-    if(nicknameAlreadyExists) {
-      throw(new ApiError('Nickname already exists', 409));
+    const nicknameAlreadyExists: boolean = await userDatamapper.findOne(
+      'nickname',
+      nickname,
+    );
+    if (nicknameAlreadyExists) {
+      throw new ApiError('Nickname already exists', 409);
     }
 
     const hashedPassword: string = await argon.hashFunc(password);
@@ -63,4 +76,4 @@ export default {
   // async logout(id: number): Promise<void> {
   //   return;
   // }
-}
+};
