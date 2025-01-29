@@ -7,10 +7,20 @@ import createUserSchema from '../schemas/createUser.schema.ts';
 
 const router = express.Router();
 
-router.route('/signup')
+router
+  .route('/')
   .post(
     validator(createUserSchema, 'body'),
-    cw(userController.create.bind(userController))
+    cw(userController.create.bind(userController)),
   );
 
+router
+  .route('/profile')
+  /**
+   * Delete an user in database
+   * @return {Response} 204
+   * @return {ApiError} 404 - User not found
+   * @return {ApiError} 500 - Internal server error
+   */
+  .delete(cw(userController.delete.bind(userController)));
 export default router;

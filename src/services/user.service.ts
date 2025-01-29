@@ -65,15 +65,18 @@ export default {
   //   return updatedUser;
   // },
 
-  // async delete(id: number): Promise<void> {
-  //   return;
-  // },
+  /**
+   * Call datamapper to delete user and check if user has been deleted
+   * @param {number} id - User's id
+   * @throws {ApiError} 404 - User not found
+   * @returns {Promise<{void}>}
+   */
+  async delete(id: number): Promise<void> {
+    const deletedUser = await userDatamapper.delete(id);
+    if (!deletedUser) {
+      throw new ApiError('User not found', 404);
+    }
 
-  // async login(input: LoginUser): Promise<void> {
-  //   return;
-  // },
-
-  // async logout(id: number): Promise<void> {
-  //   return;
-  // }
+    return;
+  },
 };

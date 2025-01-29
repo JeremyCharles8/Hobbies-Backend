@@ -8,7 +8,7 @@ export default class CoreController<R, I, J> {
 
   constructor(service: IService<R, I, J, any>) {
     this.service = service;
-  };
+  }
 
   // async getAll(_: Request, res: Response): Promise<Response<R[]>> {
   //   const data = await this.service.getAll();
@@ -26,7 +26,7 @@ export default class CoreController<R, I, J> {
 
   //   return res.status(200).json(data);
   // }
-  
+
   /**
    * Call the appropriate service with new entity informations to create this one
    * @param {Request<{I}>} req - Contains informations about entity that has to be created
@@ -38,9 +38,11 @@ export default class CoreController<R, I, J> {
     const input = req.body;
     await this.service.create(input);
 
-    return res.status(201).json({ message: `${className.entityName} created successfully` });
+    return res
+      .status(201)
+      .json({ message: `${className.entityName} created successfully` });
   }
-  
+
   // async update(req: Request<{id: string}, {}, J>, res: Response): Promise<Response<R>> {
   //   const id = parseInt(req.params.id, 10);
   //   const input = req.body;
@@ -52,11 +54,17 @@ export default class CoreController<R, I, J> {
 
   //   return res.status(200).json(updatedData);
   // }
-  
-  // async delete(req: Request, res: Response): Promise<Response> {
-  //   const id = parseInt(req.params.id, 10);
-  //   await this.service.delete(id);
 
-  //   return res.status(204);
-  // }
-};
+  /**
+   * Get user's id in request and delete service
+   * @param {Request} req
+   * @param {Response} res
+   * @returns {Promise<{Response}>} 204 for request done but nothing to return
+   */
+  async delete(req: Request, res: Response): Promise<Response> {
+    const { id } = (req as Request & { user: { id: number } }).user;
+    await this.service.delete(id);
+
+    return res.status(204);
+  }
+}
