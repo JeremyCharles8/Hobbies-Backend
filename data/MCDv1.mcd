@@ -1,0 +1,11 @@
+BD: ISBN, titre, volume, série
+LIRE2, 0N UTILISATEUR, 1N LIVRE
+LIVRE: ISBN, titre, volume, série
+
+LIRE, 0N UTILISATEUR, 1N BD
+UTILISATEUR: email, pseudonyme, mot de passe, rôle
+JOUER, 0N UTILISATEUR, 1N JEU DE PLATEAU
+
+:
+:
+JEU DE PLATEAU: titre
