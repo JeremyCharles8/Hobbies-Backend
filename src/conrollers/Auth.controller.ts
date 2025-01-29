@@ -8,7 +8,7 @@ export default class Auth {
    * Get user's login informations, call login service, set cookie with tokens and return it
    * @param {Request<{}, {}, LoginInput>} req - Contain user's login informations
    * @param {Response} res
-   * @returns {Promise<Response>} 200 status if login successfully
+   * @returns {Promise<Response>} 200 - Successfully logged
    */
   static async login(
     req: Request<{}, {}, LoginInput>,
@@ -28,5 +28,24 @@ export default class Auth {
     });
 
     return res.status(200).json('Successfully logged');
+  }
+  /**
+   * Delete cookie and call logout service to update user in database
+   * @param {Request} req.user.id - User's id
+   * @param {Response} res
+   * @returns {Promise<{Response}>} 200 - Successfully logged out
+   */
+  static async logout(req: Request, res: Response): Promise<Response> {
+    const { id } = (req as Request & { user: { id: number } }).user;
+
+    await authService.logout(id);
+
+    res.clearCookie('authTokens', {
+      httpOnly: true,
+      secure: false,
+      sameSite: 'none',
+    });
+
+    return res.status(200).json('Successfully logged out');
   }
 }

@@ -21,4 +21,14 @@ router
    */
   .post(validator(signinSchema, 'body'), cw(authController.login));
 
+router
+  .route('/logout')
+  /**
+   * Disconnect user
+   * @return {Response} 200 - Successfully logged out
+   * @return {ApiError} 404 - User not found
+   * @return {ApiError} 500 - Internal server error
+   */
+  .post(cw(authController.logout));
+
 export default router;

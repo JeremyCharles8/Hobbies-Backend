@@ -33,4 +33,21 @@ export default {
 
     return { accessToken, refreshToken };
   },
+
+  /**
+   * Verify that user exists in database et delete his refresh token
+   * @param {number} id - user's id
+   * @throws {ApiError} 404 - User not found
+   * @returns {Promise<{void}>}
+   */
+  async logout(id: number): Promise<void> {
+    const user = await userDatamapper.findByPk(id);
+    if (!user) {
+      throw new ApiError('User not found', 404);
+    }
+
+    await userDatamapper.update(id, { refreshToken: null });
+
+    return;
+  },
 };

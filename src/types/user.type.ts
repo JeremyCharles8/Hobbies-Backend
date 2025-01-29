@@ -8,7 +8,7 @@ export interface IUser {
   email: string;
   password: string;
   repeatPassword?: string;
-  refreshToken?: string;
+  refreshToken?: string | null;
   role: string;
   img?: string;
   book: IBook[];
