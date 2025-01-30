@@ -6,7 +6,7 @@ import { LoginInput } from '../types/user.type.ts';
 export default class Auth {
   /**
    * Get user's login informations, call login service, set cookie with tokens and return it
-   * @param {Request<{}, {}, LoginInput>} req - Contain user's login informations
+   * @param {Request<LoginInput>} req.body - Contain user's login informations
    * @param {Response} res
    * @returns {Promise<Response>} 200 - Successfully logged
    */
@@ -14,8 +14,6 @@ export default class Auth {
     req: Request<{}, {}, LoginInput>,
     res: Response,
   ): Promise<Response> {
-    console.log('Entrée conroleur');
-
     const input = req.body;
     const { accessToken, refreshToken } = await authService.login(input);
     const tokenPayload = JSON.stringify({ accessToken, refreshToken });
@@ -33,7 +31,7 @@ export default class Auth {
    * Delete cookie and call logout service to update user in database
    * @param {Request} req.user.id - User's id
    * @param {Response} res
-   * @returns {Promise<{Response}>} 200 - Successfully logged out
+   * @returns {Promise<Response>} 200 - Successfully logged out
    */
   static async logout(req: Request, res: Response): Promise<Response> {
     const { id } = (req as Request & { user: { id: number } }).user;

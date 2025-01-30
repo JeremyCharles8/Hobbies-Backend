@@ -11,7 +11,7 @@ export default {
    * Check if user exists in database, verify password and calls jwt.helper to create tokens
    * @param {LoginInput} input - Contains login user's informations
    * @throws {ApiError} 401 - Incorrect email or password
-   * @returns {Promise<{ accessToken: string; refreshToken:string }>}
+   * @returns {Promise<{accessToken: string, refreshToken: string}>} Return two jwt with different lifetime
    */
   async login(
     input: LoginInput,
@@ -38,7 +38,7 @@ export default {
    * Verify that user exists in database et delete his refresh token
    * @param {number} id - user's id
    * @throws {ApiError} 404 - User not found
-   * @returns {Promise<{void}>}
+   * @returns {Promise<void>}
    */
   async logout(id: number): Promise<void> {
     const user = await userDatamapper.findByPk(id);

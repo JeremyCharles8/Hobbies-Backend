@@ -18,7 +18,16 @@ export interface IUser {
   updated_at?: Date;
 }
 
-export type User = Omit<IUser, 'password' | 'repeatPassword'>;
+export type User = Omit<
+  IUser,
+  | 'id'
+  | 'refreshToken'
+  | 'book'
+  | 'comic'
+  | 'boardGame'
+  | 'password'
+  | 'repeatPassword'
+>;
 
 export type CreateUser = Pick<
   IUser,
@@ -28,7 +37,12 @@ export type CreateUser = Pick<
 export type UpdateUser = Partial<
   Pick<
     IUser,
-    'nickname' | 'email' | 'password' | 'repeatPassword' | 'refreshToken'
+    | 'nickname'
+    | 'email'
+    | 'password'
+    | 'repeatPassword'
+    | 'refreshToken'
+    | 'img'
   >
 >;
 
