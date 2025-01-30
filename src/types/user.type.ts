@@ -14,19 +14,13 @@ export interface IUser {
   book: IBook[];
   comic: IComic[];
   boardGame: IBoardGame[];
-  created_at: Date;
-  updated_at?: Date;
+  createdAt: Date;
+  updatedAt?: Date;
 }
 
-export type User = Omit<
+export type User = Pick<
   IUser,
-  | 'id'
-  | 'refreshToken'
-  | 'book'
-  | 'comic'
-  | 'boardGame'
-  | 'password'
-  | 'repeatPassword'
+  'nickname' | 'email' | 'img' | 'createdAt' | 'updatedAt'
 >;
 
 export type CreateUser = Pick<

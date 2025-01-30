@@ -28,9 +28,22 @@ export default class CoreController<R, I, J> {
   // }
 
   /**
+   * Generic method that call appropriate service to get one entity's row
+   * @param {Request} req
+   * @param {Response} res
+   * @returns {Promise<Response<R>>} 200 - return selected entity's row
+   */
+  async getOne(req: Request, res: Response): Promise<Response<R>> {
+    const { id } = (req as Request & { user: { id: number } }).user;
+    const entity = await this.service.getOne(id);
+
+    return res.status(200).json(entity);
+  }
+
+  /**
    * Call the appropriate service with new entity informations to create this one
    * @param {Request<I>} req - Contains informations about entity that has to be created
-   * @param {Response} res - Response object
+   * @param {Response} res
    * @returns {Promise<Response>} 201 - e.g: User created successfully
    */
   async create(req: Request<{}, {}, I>, res: Response): Promise<Response> {

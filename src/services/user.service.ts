@@ -25,6 +25,21 @@ export default {
   // },
 
   /**
+   * Call datamapper to get one user's informations
+   * @param {number} id - User's id
+   * @throws {ApiError} 404 - User not found
+   * @returns {Promise<User>} user's informations
+   */
+  async getOne(id: number): Promise<User> {
+    const user = await userDatamapper.findByPk(id);
+    if (!user) {
+      throw new ApiError('User not found', 404);
+    }
+
+    return user;
+  },
+
+  /**
    * Check if email or nickname already exist in database and call datamapper to create a new user
    * @param {CreateUser} input - Contains mandatory informations to create user
    * @throws {ApiError} 409 - Email already exists
@@ -60,6 +75,15 @@ export default {
     return;
   },
 
+  /**
+   * Check if user exists and call datamapper to update user's informations
+   * @param {number} id User to update
+   * @param {UpdateUser} input Information(s) to update
+   * @throws {ApiError} 404 - User not found
+   * @throws {ApiError} 409 - Email already exists
+   * @throws {ApiError} 409 - Nickname already exists
+   * @returns {Promise<User>} User with updated information(s)
+   */
   async update(id: number, input: UpdateUser): Promise<User> {
     const user = await userDatamapper.findByPk(id);
     if (!user) {

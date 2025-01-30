@@ -3,6 +3,7 @@ import express from 'express';
 import { userController } from '../conrollers/index.controller.ts';
 import cw from '../middlewares/wrapper.middleware.ts';
 import validator from '../middlewares/validation.middleware.ts';
+
 import createUserSchema from '../schemas/createUser.schema.ts';
 import updateUserSchema from '../schemas/updateUser.schema.ts';
 
@@ -10,6 +11,7 @@ const router = express.Router();
 
 router
   .route('/')
+  .get(cw(userController.getOne.bind(userController)))
   /**
    * Create new user
    * @param {CreateUser} request.body.required User's informations

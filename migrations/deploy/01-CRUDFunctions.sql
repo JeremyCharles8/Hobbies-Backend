@@ -2,6 +2,20 @@
 
 BEGIN;
 
+CREATE FUNCTION "select_user_by_pk" (id int) RETURNS JSON AS $$
+
+  SELECT
+    json_build_object (
+      'nickname', "nickname",
+      'email', "email",
+      'img', "img_url",
+      'createdAt', "created_at",
+      'updatedAt', "updated_at"
+    )
+  FROM "user"
+  WHERE "id" = $1::int;
+$$ LANGUAGE SQL STRICT;
+
 CREATE FUNCTION "select_user_by_email" (input text) RETURNS JSON AS $$
 
   SELECT
