@@ -12,8 +12,8 @@ export default {
   async createTokens(
     input: TokenInfo,
   ): Promise<{ accessToken: string; refreshToken: string }> {
-    const accessTokenExp = Math.round((Date.now() / 1000) * 60 + 15);
-    const refreshTokenExp = Math.round((Date.now() / 1000) * 86400 + 30);
+    const accessTokenExp = Math.round(Date.now() / 1000 + 60 * 15);
+    const refreshTokenExp = Math.round(Date.now() / 1000 + 3600 * 24 * 30);
     const jwtPrivateKey = process.env.JWT_PRIVATE_KEY;
 
     if (!jwtPrivateKey) {

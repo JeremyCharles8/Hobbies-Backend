@@ -312,3 +312,355 @@
     '    at async <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/wrapper.middleware.ts:7:5)',
   timestamp: '2025-02-14T18:50:32.339Z'
 }
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:52:45.008Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:52:46.057Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:52:48.255Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:52:52.282Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:55:11.663Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:55:12.737Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T17:55:14.823Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:08:36.675Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:08:59.142Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:00.188Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:02.417Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:06.764Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:19.859Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:20.883Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:22.899Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:26.911Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:42.817Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:43.895Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:45.927Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:09:50.186Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:12:52.140Z'
+}
+{
+  level: 'error',
+  message: "Cannot read properties of undefined (reading 'split')",
+  stack: "TypeError: Cannot read properties of undefined (reading 'split')\n" +
+    '    at <anonymous> (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/src/middlewares/auth.middleware.ts:12:50)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:149:13)\n' +
+    '    at Route.dispatch (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/route.js:119:3)\n' +
+    '    at Layer.handle [as handle_request] (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/layer.js:95:5)\n' +
+    '    at /home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:284:15\n' +
+    '    at Function.process_params (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:346:12)\n' +
+    '    at next (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:280:10)\n' +
+    '    at Function.handle (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:175:3)\n' +
+    '    at router (/home/sowkaneda/Projets-JS/Hobbies/hobbies/Backend/node_modules/express/lib/router/index.js:47:12)',
+  timestamp: '2025-02-18T18:12:53.219Z'
+}
