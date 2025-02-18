@@ -10,7 +10,7 @@ import {
   AdminUser,
   UpdateUser,
 } from '../types/user.type.ts';
-//TODO End delete, login, logout methods and manage errors.
+
 export default {
   // async getAll(): Promise<User[]> {
   //   //TODO Check if request come from an admin

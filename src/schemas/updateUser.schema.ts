@@ -16,9 +16,11 @@ export default Joi.object<UpdateUser>({
       ),
     )
     .optional()
-    .message(
-      'Password must contain at least 8 characters including uppercase, lowercase, number and special characters',
-    ),
+    // prettier-ignore
+    .messages({
+      'string.pattern.base':
+        'Password must contain at least 8 characters including uppercase, lowercase, number and special characters',
+    }),
   repeatPassword: Joi.string().valid(Joi.ref('password')).optional().messages({
     'any.only': 'Password and repeated password must be the same',
   }),

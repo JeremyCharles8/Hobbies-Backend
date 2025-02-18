@@ -34,7 +34,15 @@ export default class CoreController<R, I, J> {
    * @returns {Promise<Response<R>>} 200 - return selected entity's row
    */
   async getOne(req: Request, res: Response): Promise<Response<R>> {
-    const { id } = (req as Request & { user: { id: number } }).user;
+    const className = this.constructor as typeof CoreController;
+    if (className.entityName === 'user') {
+      const { id } = (req as Request & { user: { id: number } }).user;
+      const entity = await this.service.getOne(id);
+
+      return res.status(200).json(entity);
+    }
+
+    const id = parseInt(req.params.id, 10);
     const entity = await this.service.getOne(id);
 
     return res.status(200).json(entity);
@@ -62,8 +70,22 @@ export default class CoreController<R, I, J> {
    * @param {Response} res
    * @returns {Promise<Response<R>>} 200 - return entity with updated information(s)
    */
-  async update(req: Request<{}, {}, J>, res: Response): Promise<Response<R>> {
-    const { id } = (req as Request & { user: { id: number } }).user;
+  async update(
+    req: Request<{ id: string }, {}, J>,
+    res: Response,
+  ): Promise<Response<R>> {
+    const className = this.constructor as typeof CoreController;
+    if (className.entityName === 'user') {
+      const { id } = (req as Request<{ id: string }> & { user: { id: number } })
+        .user;
+      const input = req.body;
+
+      const updatedData = await this.service.update(id, input);
+
+      return res.status(200).json(updatedData);
+    }
+
+    const id = parseInt(req.params.id, 10);
     const input = req.body;
 
     const updatedData = await this.service.update(id, input);
@@ -78,7 +100,15 @@ export default class CoreController<R, I, J> {
    * @returns {Promise<Response>} 204 for request done but nothing to return
    */
   async delete(req: Request, res: Response): Promise<Response> {
-    const { id } = (req as Request & { user: { id: number } }).user;
+    const className = this.constructor as typeof CoreController;
+    if (className.entityName === 'user') {
+      const { id } = (req as Request & { user: { id: number } }).user;
+      await this.service.delete(id);
+
+      return res.status(204);
+    }
+
+    const id = parseInt(req.params.id, 10);
     await this.service.delete(id);
 
     return res.status(204);

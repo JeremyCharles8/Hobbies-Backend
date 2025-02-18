@@ -3,6 +3,7 @@ import express from 'express';
 import { userController } from '../conrollers/index.controller.ts';
 import cw from '../middlewares/wrapper.middleware.ts';
 import validator from '../middlewares/validation.middleware.ts';
+import auth from '../middlewares/auth.middleware.ts';
 
 import createUserSchema from '../schemas/createUser.schema.ts';
 import updateUserSchema from '../schemas/updateUser.schema.ts';
@@ -11,7 +12,12 @@ const router = express.Router();
 
 router
   .route('/')
-  .get(cw(userController.getOne.bind(userController)))
+  /**
+   * Get user's inforamtions
+   * @return {User} 200 - Contain user's informations
+   * @return {ApiError} 404 - User not found
+   */
+  .get(auth(), cw(userController.getOne.bind(userController)))
   /**
    * Create new user
    * @param {CreateUser} request.body.required User's informations
@@ -35,6 +41,7 @@ router
    * @return {ApiError} 500 - Internal server error
    */
   .patch(
+    auth(),
     validator(updateUserSchema, 'body'),
     cw(userController.update.bind(userController)),
   )
@@ -44,6 +51,6 @@ router
    * @return {ApiError} 404 - User not found
    * @return {ApiError} 500 - Internal server error
    */
-  .delete(cw(userController.delete.bind(userController)));
+  .delete(auth(), cw(userController.delete.bind(userController)));
 
 export default router;

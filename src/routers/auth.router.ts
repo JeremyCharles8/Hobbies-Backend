@@ -6,8 +6,6 @@ import validator from '../middlewares/validation.middleware.ts';
 
 import signinSchema from '../schemas/signin.schema.ts';
 
-import { LoginInput } from '../types/user.type.ts';
-
 const router = express.Router();
 
 router

@@ -18,10 +18,7 @@ export interface IUser {
   updatedAt?: Date;
 }
 
-export type User = Pick<
-  IUser,
-  'nickname' | 'email' | 'img' | 'createdAt' | 'updatedAt'
->;
+export type User = Omit<IUser, 'password' | 'repeatPassword' | 'refreshToken'>;
 
 export type CreateUser = Pick<
   IUser,

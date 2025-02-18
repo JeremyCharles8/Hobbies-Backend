@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 
 import authService from '../services/auth.service.ts';
 import { LoginInput } from '../types/user.type.ts';
+import { AuthRequest } from '../types/auth.type.ts';
 
 export default class Auth {
   /**
@@ -21,20 +22,21 @@ export default class Auth {
     res.cookie('authTokens', tokenPayload, {
       httpOnly: true,
       secure: false,
-      sameSite: 'none',
+      sameSite: 'lax',
       maxAge: 30 * 86400000,
     });
 
     return res.status(200).json('Successfully logged');
   }
+
   /**
    * Delete cookie and call logout service to update user in database
    * @param {Request} req.user.id - User's id
    * @param {Response} res
    * @returns {Promise<Response>} 200 - Successfully logged out
    */
-  static async logout(req: Request, res: Response): Promise<Response> {
-    const { id } = (req as Request & { user: { id: number } }).user;
+  static async logout(req: AuthRequest, res: Response): Promise<Response> {
+    const { id } = req.user;
 
     await authService.logout(id);
 
