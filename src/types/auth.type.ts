@@ -9,7 +9,7 @@ export interface CustomPayload extends JwtPayload {
 }
 
 export interface AuthRequest extends Request {
-  user: {
+  user?: {
     id: number;
     role?: string;
   };

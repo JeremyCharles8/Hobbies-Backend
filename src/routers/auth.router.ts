@@ -3,6 +3,7 @@ import express from 'express';
 import authController from '../conrollers/Auth.controller.ts';
 import cw from '../middlewares/wrapper.middleware.ts';
 import validator from '../middlewares/validation.middleware.ts';
+import auth from '../middlewares/auth.middleware.ts';
 
 import signinSchema from '../schemas/signin.schema.ts';
 
@@ -27,6 +28,6 @@ router
    * @return {ApiError} 404 - User not found
    * @return {ApiError} 500 - Internal server error
    */
-  .post(cw(authController.logout));
+  .post(auth(), cw(authController.logout));
 
 export default router;

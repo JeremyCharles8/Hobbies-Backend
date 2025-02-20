@@ -36,9 +36,10 @@ export default class Auth {
    * @returns {Promise<Response>} 200 - Successfully logged out
    */
   static async logout(req: AuthRequest, res: Response): Promise<Response> {
-    const { id } = req.user;
-
-    await authService.logout(id);
+    if (req.user) {
+      const { id } = req.user;
+      await authService.logout(id);
+    }
 
     res.clearCookie('authTokens', {
       httpOnly: true,

@@ -71,24 +71,22 @@ export default class CoreController<R, I, J> {
    * @returns {Promise<Response<R>>} 200 - return entity with updated information(s)
    */
   async update(
-    req: Request<{ id: string }, {}, J>,
+    req: Request<{ id?: string }, {}, J>,
     res: Response,
   ): Promise<Response<R>> {
-    const className = this.constructor as typeof CoreController;
-    if (className.entityName === 'user') {
-      const { id } = (req as Request<{ id: string }> & { user: { id: number } })
-        .user;
+    const userId = (req as Request<{ id: string }> & { user: { id: number } })
+      .user.id;
+    if (req.params.id) {
+      const id = parseInt(req.params.id, 10);
       const input = req.body;
 
-      const updatedData = await this.service.update(id, input);
+      const updatedData = await this.service.update(userId, input, id);
 
       return res.status(200).json(updatedData);
     }
 
-    const id = parseInt(req.params.id, 10);
     const input = req.body;
-
-    const updatedData = await this.service.update(id, input);
+    const updatedData = await this.service.update(userId, input);
 
     return res.status(200).json(updatedData);
   }
@@ -100,16 +98,15 @@ export default class CoreController<R, I, J> {
    * @returns {Promise<Response>} 204 for request done but nothing to return
    */
   async delete(req: Request, res: Response): Promise<Response> {
-    const className = this.constructor as typeof CoreController;
-    if (className.entityName === 'user') {
-      const { id } = (req as Request & { user: { id: number } }).user;
-      await this.service.delete(id);
+    const userId = (req as Request & { user: { id: number } }).user.id;
+    if (req.params.id) {
+      const id = parseInt(req.params.id, 10);
+      await this.service.delete(userId, id);
 
       return res.status(204);
     }
 
-    const id = parseInt(req.params.id, 10);
-    await this.service.delete(id);
+    await this.service.delete(userId);
 
     return res.status(204);
   }

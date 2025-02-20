@@ -9,7 +9,7 @@ import { AuthRequest, CustomPayload } from '../types/auth.type.ts';
 export default () =>
   (req: AuthRequest, res: Response, next: NextFunction): void => {
     try {
-      const accessToken = req.cookies.authTokens.split('"')[3];
+      const accessToken: string = req.cookies.authTokens.split('"')[3];
       if (!accessToken) {
         throw new ApiError('Unauthorized, token is missing', 401);
       }

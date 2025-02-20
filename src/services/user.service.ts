@@ -2,14 +2,7 @@ import { userDatamapper } from '../datamappers/index.datamapper.ts';
 import ApiError from '../errors/Api.error.ts';
 import argon from '../helpers/argon.helper.ts';
 
-import {
-  LoginUser,
-  CreateUser,
-  User,
-  PublicUser,
-  AdminUser,
-  UpdateUser,
-} from '../types/user.type.ts';
+import { LoginUser, CreateUser, User, UpdateUser } from '../types/user.type.ts';
 
 export default {
   // async getAll(): Promise<User[]> {

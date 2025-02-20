@@ -18,6 +18,11 @@ export interface IUser {
   updatedAt?: Date;
 }
 
+export type UserPersonalData = Pick<
+  IUser,
+  'nickname' | 'email' | 'createdAt' | 'updatedAt'
+>;
+
 export type User = Omit<IUser, 'password' | 'repeatPassword' | 'refreshToken'>;
 
 export type CreateUser = Pick<
