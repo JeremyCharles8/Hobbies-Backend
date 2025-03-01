@@ -18,6 +18,11 @@ export default class CoreDatamapper<R extends QueryResultRow, I, J> {
     return results.rows;
   }
 
+  /**
+   * Generic method which looks specific line in database using id
+   * @param {number} id - Entity id
+   * @returns {Promise<R>}
+   */
   async findByPk(id: number): Promise<R | null> {
     const className = this.constructor as typeof CoreDatamapper;
     // Request to database
@@ -29,14 +34,16 @@ export default class CoreDatamapper<R extends QueryResultRow, I, J> {
       return null;
     }
     // Return data
+    console.log(results.rows[0].result);
+
     return results.rows[0].result;
   }
 
   /**
    * Generic method which adds an entity's row in database
    * @param {I} input - Object which contains new entity's informations
-   * @param {number | void} id - User id used if which is add is not an user
-   * @returns {Promise<{void}>}
+   * @param {number | void} id - User id used if which is added is not an user
+   * @returns {Promise<void>}
    */
   async create(input: I, id: number | void): Promise<void> {
     const className = this.constructor as typeof CoreDatamapper;

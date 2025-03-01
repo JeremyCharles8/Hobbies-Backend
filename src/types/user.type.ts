@@ -1,6 +1,6 @@
-import { IBoardGame } from './boardGame.type.ts';
-import { IBook } from './book.type.ts';
-import { IComic } from './comic.type.ts';
+import { ProfileBoardGameList } from './boardGame.type.ts';
+import { ProfileBookList } from './book.type.ts';
+import { ProfileComicList } from './comic.type.ts';
 
 export interface IUser {
   id: number;
@@ -11,9 +11,9 @@ export interface IUser {
   refreshToken?: string | null;
   role: string;
   img?: string;
-  book: IBook[];
-  comic: IComic[];
-  boardGame: IBoardGame[];
+  book: ProfileBookList[];
+  comic: ProfileComicList[];
+  boardGame: ProfileBoardGameList[];
   createdAt: Date;
   updatedAt?: Date;
 }
@@ -23,7 +23,10 @@ export type UserPersonalData = Pick<
   'nickname' | 'email' | 'createdAt' | 'updatedAt'
 >;
 
-export type User = Omit<IUser, 'password' | 'repeatPassword' | 'refreshToken'>;
+export type User = Omit<
+  IUser,
+  'password' | 'repeatPassword' | 'refreshToken' | 'role'
+>;
 
 export type CreateUser = Pick<
   IUser,

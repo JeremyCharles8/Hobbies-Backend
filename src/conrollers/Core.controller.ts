@@ -29,7 +29,7 @@ export default class CoreController<R, I, J> {
 
   /**
    * Generic method that call appropriate service to get one entity's row
-   * @param {Request} req
+   * @param {Request} req Contain entity id in params or user
    * @param {Response} res
    * @returns {Promise<Response<R>>} 200 - return selected entity's row
    */

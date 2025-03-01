@@ -9,5 +9,6 @@ Content-Type: application/json
 }
 ###
 
-GET http://localhost:3000/api/users/
-Cookie: authTokens=%7B%22accessToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjEwNDMwMDcwMTMzMiwiaW5wdXQiOnsiaWQiOjF9LCJpYXQiOjE3MzgzNDUwMjF9.Xh9f32eX50XCKaP5CdqtKLsTeZGjjaURKyrLRWEo_0g%22%2C%22refreshToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MDE5MzAwOTg5NjI1MSwiaW5wdXQiOnsiaWQiOjF9LCJpYXQiOjE3MzgzNDUwMjF9.pvVWLDGqWXYij8qcgxpMB-ohUWNjHFezLkvz-PTAUb8%22%7D
+GET http://localhost:3000/api/users/profile
+Content-Type: application/json
+Cookie: authTokens=%7B%22accessToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDAxNTgzNjYsImlucHV0Ijp7ImlkIjoxfSwiaWF0IjoxNzQwMTU3NDY2fQ.IaxHKsR_Mlw04oPD8A9MrFLYy5WRHYQ3gCApqzgfyQQ%22%2C%22refreshToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDI3NDk0NjYsImlucHV0Ijp7ImlkIjoxfSwiaWF0IjoxNzQwMTU3NDY2fQ.96luYoNi713vQNfeHrWw9gz0Ms1MlP7zDvXgDt9WUG0%22%7D

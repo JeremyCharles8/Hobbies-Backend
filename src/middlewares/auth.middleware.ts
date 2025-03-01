@@ -29,7 +29,7 @@ export default () =>
           return res.redirect(307, '/api/auth/refreshToken');
         }
 
-        return next(error);
+        return next(new ApiError('Unauthorized, invalid token', 401));
       }
     }
   };

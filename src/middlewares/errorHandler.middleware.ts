@@ -3,7 +3,6 @@ import ApiError from '../errors/Api.error.ts';
 import logger from '../helpers/logger.helper.ts';
 
 import { JoiErr } from '../types/joiError.type.ts';
-import { JsonWebTokenError, NotBeforeError } from 'jsonwebtoken';
 
 const errorHandler: ErrorRequestHandler = (
   err: ApiError,
@@ -13,6 +12,14 @@ const errorHandler: ErrorRequestHandler = (
 ): void => {
   logger.error(err);
   let { status, message } = err;
+
+  if (err.name === 'External request failed') {
+    if (status === 404) {
+      message = 'Unknoww title, resource not found';
+    } else {
+      status = 500;
+    }
+  }
 
   if (err.name === 'JsonWebTokenError' || err.name === 'NotBeforeError') {
     message = 'Unauthorized, invalid token';

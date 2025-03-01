@@ -11,13 +11,17 @@ import updateUserSchema from '../schemas/updateUser.schema.ts';
 const router = express.Router();
 
 router
-  .route('/')
+  .route('/profile')
   /**
-   * Get user's inforamtions
+   * Get user's profile informations
    * @return {User} 200 - Contain user's informations
    * @return {ApiError} 404 - User not found
+   * @return {ApiError} 500 - Internal server error
    */
-  .get(auth(), cw(userController.getOne.bind(userController)))
+  .get(auth(), cw(userController.getOne.bind(userController)));
+
+router
+  .route('/')
   /**
    * Create new user
    * @param {CreateUser} request.body.required User's informations
