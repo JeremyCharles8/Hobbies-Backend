@@ -1,4 +1,4 @@
-POST http://localhost:3000/api/users/signup
+POST http://localhost:3000/api/users/
 Content-Type: application/json
 
 {
@@ -7,3 +7,8 @@ Content-Type: application/json
   "password": "passwordDeTest0!",
   "repeatPassword": "passwordDeTest0!"
 }
+###
+
+GET http://localhost:3000/api/users/profile
+Content-Type: application/json
+Cookie: authTokens=%7B%22accessToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDAxNTgzNjYsImlucHV0Ijp7ImlkIjoxfSwiaWF0IjoxNzQwMTU3NDY2fQ.IaxHKsR_Mlw04oPD8A9MrFLYy5WRHYQ3gCApqzgfyQQ%22%2C%22refreshToken%22%3A%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDI3NDk0NjYsImlucHV0Ijp7ImlkIjoxfSwiaWF0IjoxNzQwMTU3NDY2fQ.96luYoNi713vQNfeHrWw9gz0Ms1MlP7zDvXgDt9WUG0%22%7D

@@ -1,8 +1,10 @@
 export interface IBoardGame {
   id: number;
   title: string;
-  created_at: Date;
-  updated_at: Date;
-};
+  createdAt: Date;
+  updatedAt?: Date;
+}
 
 export type CreateBoardGame = Pick<IBoardGame, 'title'>;
+
+export type ProfileBoardGameList = Omit<IBoardGame, 'createdAt'>;

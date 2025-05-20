@@ -9,6 +9,6 @@ export default class UserController extends CoreController<
   CreateUser,
   UpdateUser
 > {
-  static entityName: string = 'User';
+  static entityName: string = 'user';
   service: IService<User, CreateUser, UpdateUser, void> = userServices;
 }

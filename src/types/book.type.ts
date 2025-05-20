@@ -4,8 +4,11 @@ export interface IBook {
   title: string;
   volume: number;
   serie: string;
-  created_at: Date;
-  updated_at: Date;
-};
+  type: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 export type CreateBook = Omit<IBook, 'id' | 'created_at' | 'updated_at'>;
+
+export type ProfileBookList = Omit<IBook, 'isbn' | 'createdAt'>;
